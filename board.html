@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<!-- Include stylesheet -->
+
+<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href= "board.css"> 
+
+
+<!-- Create the editor container -->
+<div class="container">
+    <div id="boardQuill">   
+        <div class="column-container"></div>     
+    </div>
+</div>   
+
+
+<script id="column-template" type="mustache/x-templ">
+    <div class="column">
+        <button class="btn-delete">X</button>
+        <h2 class="column-title">{{ name }} </h2>
+        <ul id= '{{ id }}' class="column-card-list"></ul>
+        <button class="add-card">Add a card</button>
+    </div>
+</script>
+
+<script id="card-template" type="mustache/x-tmpl">
+    <div class="card">
+        <p class="card-description">{{ description }}</p>
+        <button class="btn-delete">X</button>
+    </div> </script>
+
+
+<!-- Include the Quill library -->
+
+<script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.3/mustache.js"></script>
+<script src="board.js"></script>
